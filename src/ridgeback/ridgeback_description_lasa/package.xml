@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>ridgeback_description</name>
+  <name>ridgeback_description_lasa</name>
   <version>0.1.6</version>
   <description>URDF robot description for Ridgeback</description>
 
@@ -9,6 +9,7 @@
   <license>BSD</license>
 
   <author email="mpurvis@clearpathrobotics.com">Mike Purvis</author>
+  <author email="maxime.gautier@epfl.ch">Maxime Gautier</author>
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roslaunch</build_depend>

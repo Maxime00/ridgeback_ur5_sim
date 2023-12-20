@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ridgeback_description)
+project(ridgeback_description_lasa)
 
 find_package(catkin REQUIRED COMPONENTS roslaunch)
 
