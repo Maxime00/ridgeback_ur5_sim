@@ -63,6 +63,7 @@
 	  <child link="arch_link" />
   </joint>
 
+
 <!-- Spawn arm -->
   <xacro:ur5_robot prefix="ur5_arm_"/>
 

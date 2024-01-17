@@ -7,13 +7,17 @@ find_package(catkin REQUIRED COMPONENTS
   realtime_tools
   tf
   nav_msgs
-  roslaunch)
+  roslaunch
+  geometry_msgs
+  rospy)
 
 set(mecanum_drive_controller_sources
   src/mecanum_drive_controller.cpp
   src/odometry.cpp
   src/speed_limiter.cpp
 )
+
+catkin_python_setup()
 
 catkin_package(
   INCLUDE_DIRS include
@@ -23,6 +27,18 @@ catkin_package(
 
 include_directories(
   include ${catkin_INCLUDE_DIRS}
+)
+
+# Add custom target to run the Python script
+add_custom_target(run_teleop_keyboard
+  COMMAND rosrun ridgeback_control teleop_keyboard.py
+  DEPENDS teleop_keyboard
+)
+
+# Install the Python script
+install(PROGRAMS
+  scripts/teleop_keyboard.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
 add_library(mecanum_drive_controller ${mecanum_drive_controller_headers} ${mecanum_drive_controller_sources})

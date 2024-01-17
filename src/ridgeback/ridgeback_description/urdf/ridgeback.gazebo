@@ -56,22 +56,22 @@
        the body level. -->
   <gazebo reference="front_left_wheel_link">
     <material>Gazebo/DarkGrey</material>
-    <mu1>0.0</mu1>
+    <mu1>1.0</mu1>
   </gazebo>
 
   <gazebo reference="front_right_wheel_link">
     <material>Gazebo/DarkGrey</material>
-    <mu1>0.0</mu1>
+    <mu1>1.0</mu1>
   </gazebo>
 
   <gazebo reference="rear_left_wheel_link">
     <material>Gazebo/DarkGrey</material>
-    <mu1>0.0</mu1>
+    <mu1>1.0</mu1>
   </gazebo>
 
   <gazebo reference="rear_right_wheel_link">
     <material>Gazebo/DarkGrey</material>
-    <mu1>0.0</mu1>
+    <mu1>1.0</mu1>
   </gazebo>
 
   <!-- This is an wheel-level solution to possibly revisit at a future date. -->
