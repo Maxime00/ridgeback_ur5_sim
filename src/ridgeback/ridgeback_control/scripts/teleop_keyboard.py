@@ -39,7 +39,7 @@ def teleop():
                 twist.angular.z = 0.0  # stop angular movement
             elif key == 'd':
                 twist.linear.y = -1.0  # Set angular velocity for turning right
-        	twist.linear.x = 0.0  # Stop linear movement
+                twist.linear.x = 0.0  # Stop linear movement
                 twist.angular.z = 0.0  # stop angular movement
             elif key == 'q':
                 twist.linear.x = 0.0  # Stop linear movement

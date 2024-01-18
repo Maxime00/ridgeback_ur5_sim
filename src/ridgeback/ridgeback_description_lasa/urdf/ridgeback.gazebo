@@ -12,6 +12,7 @@
       <odometryFrame>odom</odometryFrame>
       <odometryRate>25.0</odometryRate>
       <robotBaseFrame>base_link</robotBaseFrame>
+      <cmdVelTimeOut>0.25</cmdVelTimeOut>
       <!-- Don't publish a transform: the controller does it. -->
       <publishOdometryTf>0</publishOdometryTf>
       <yaw_velocity_p_gain>500.0</yaw_velocity_p_gain>
@@ -24,10 +25,11 @@
       <updateRate>50.0</updateRate>
       <bodyName>imu_link</bodyName>
       <topicName>imu/data</topicName>
+      <frameId>base_link</frameId>
       <accelDrift>0.005 0.005 0.005</accelDrift>
       <accelGaussianNoise>0.005 0.005 0.005</accelGaussianNoise>
-      <rateDrift>0.005 0.005 0.005 </rateDrift>
-      <rateGaussianNoise>0.005 0.005 0.005 </rateGaussianNoise>
+      <rateDrift>0.00005 0.00005 0.00005</rateDrift>
+      <rateGaussianNoise>0.00005 0.00005 0.00005</rateGaussianNoise>
       <headingDrift>0.005</headingDrift>
       <headingGaussianNoise>0.005</headingGaussianNoise>
     </plugin>
@@ -49,29 +51,40 @@
   <!-- Individual link colouring still needed in Gazebo 2.x -->
   <gazebo reference="chassis_link"><material>Gazebo/DarkGrey</material></gazebo>
   <gazebo reference="top_link"><material>Gazebo/DarkGrey</material></gazebo>
+  <gazebo reference="left_side_cover_link"><material>Gazebo/Yellow</material></gazebo>
+  <gazebo reference="right_side_cover_link"><material>Gazebo/Yellow</material></gazebo>
   <gazebo reference="front_cover_link"><material>Gazebo/DarkGrey</material></gazebo>
   <gazebo reference="rear_cover_link"><material>Gazebo/DarkGrey</material></gazebo>
+  <gazebo reference="front_lights_link"><material>Gazebo/White</material></gazebo>
+  <gazebo reference="rear_lights_link"><material>Gazebo/Red</material></gazebo>
+  <gazebo reference="front_rocker_link"><material>Gazebo/DarkGrey</material></gazebo>
+  <gazebo reference="rear_rocker_link"><material>Gazebo/DarkGrey</material></gazebo>
+  <gazebo reference="axle_link"><material>Gazebo/DarkGrey</material></gazebo>
 
   <!-- Wheel friction to zero, as movement is handled by applying forces at
        the body level. -->
   <gazebo reference="front_left_wheel_link">
     <material>Gazebo/DarkGrey</material>
-    <mu1>1.0</mu1>
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
   </gazebo>
 
   <gazebo reference="front_right_wheel_link">
     <material>Gazebo/DarkGrey</material>
-    <mu1>1.0</mu1>
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
   </gazebo>
 
   <gazebo reference="rear_left_wheel_link">
     <material>Gazebo/DarkGrey</material>
-    <mu1>1.0</mu1>
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
   </gazebo>
 
   <gazebo reference="rear_right_wheel_link">
     <material>Gazebo/DarkGrey</material>
-    <mu1>1.0</mu1>
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
   </gazebo>
 
   <!-- This is an wheel-level solution to possibly revisit at a future date. -->
