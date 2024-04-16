@@ -3,6 +3,17 @@
 Simple repo merging ridgeback packages with ur_description to control the ridgeback using Rviz.
 
 Use either in sim or with real robot, must be able to communicate with robot before launching rviz.
+## docker
+
+    # Build the Docker containers
+    docker compose build
+
+    # Start the Docker containers in detached mode
+    docker compose up -d
+
+    # Access the Docker container's shell
+    docker exec -it ros_docker-ros-1 bash
+
 
 ## Commands 
 
